@@ -16,10 +16,10 @@ exports.helloWorld = functions.https.onRequest((request, response) => {
 exports.dialogflowFirebaseFulfillment = functions.https.onRequest((request, response) => {
   const agent = new WebhookClient({ request, response });
 
-  let response = ""
   switch(agent.intent){
-    case 'roska':
+    case 'Roska':
       agent.addResponse_("Testiresponse")
+      break;
     default: 
       agent.addResponse_("Hämmennysresponse")
       break;
